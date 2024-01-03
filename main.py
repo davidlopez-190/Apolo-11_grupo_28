@@ -1,18 +1,26 @@
 import threading
 import time
+
+from configparser import ConfigParser
 from apolo_11.menu_system import main_menu, commander_center_menu, leader_center_menu
 from  apolo_11.src.helpers.utils.osystem import clear_console
 
 
-def background_task():
+config = ConfigParser()
+config.read('./config.ini')
+EXECUTION_PERIODICITY = int(config.get('apolo_11', 'cycle_frequency_time'))
+
+
+
+def request_reports_missions():
     while True:
-        time.sleep(20)
-        print("\nPrograma de Simulacion APOLO_11 Solicitando reportes del estado de los vehiculos a cada una de las Misiones... (Periodicidad de la Ejecución: 20 Segundos)") 
+        time.sleep(EXECUTION_PERIODICITY)
+        print("\nPrograma de Simulacion APOLO_11 Solicitando reportes del estado de los vehiculos a cada una de las Misiones... (Periodicidad de la Ejecución: {} Segundos)".format(EXECUTION_PERIODICITY)) 
 
 def main():
-    background_thread = threading.Thread(target=background_task)
-    background_thread.daemon = True
-    background_thread.start()
+    report_request_thread = threading.Thread(target=request_reports_missions)
+    report_request_thread.daemon = True
+    report_request_thread.start()
 
     current_menu = main_menu
 
