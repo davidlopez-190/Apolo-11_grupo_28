@@ -1,15 +1,14 @@
 import threading
 import time
 
-from configparser import ConfigParser
+
 from apolo_11.menu_system import main_menu, commander_center_menu, leader_center_menu
-from  apolo_11.src.helpers.utils.osystem import clear_console
+from apolo_11.src.helpers.utils.os_system import OsSystem
+from apolo_11.src.helpers.utils.read_config import ReadConfig
 
 
-config = ConfigParser()
-config.read('./config.ini')
-EXECUTION_PERIODICITY = int(config.get('apolo_11', 'cycle_frequency_time'))
 
+EXECUTION_PERIODICITY = ReadConfig.cycle_frequency_time()
 
 
 def request_reports_missions():
@@ -25,7 +24,7 @@ def main():
     current_menu = main_menu
 
     while True:
-        clear_console()
+        OsSystem.clear_console()
 
         current_menu()
         choice = input("\nIngrese su Eleccion (1, 2, o 3): \n")
