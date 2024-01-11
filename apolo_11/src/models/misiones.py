@@ -1,5 +1,3 @@
-import random
-
 class Mision:
     def __init__(self, nombre, descripcion, fecha_lanzamiento, fecha_fin):
         self.nombre = nombre
@@ -31,28 +29,3 @@ class Mision:
             print(f"La misión '{self.nombre}' ha sido completada. {self.dispositivo_espacial.tipo} '{self.dispositivo_espacial.nombre}' regresa a la Tierra.")
         else:
             print(f"No se puede finalizar la misión '{self.nombre}' ya que no hay ningún dispositivo espacial asignado.")
-
-    def generar_datos_aleatorios(self):
-        # Generar fechas aleatorias para la misión
-        self.fecha_lanzamiento = f"{random.randint(2025, 2030)}-{random.randint(1, 12):02d}-{random.randint(1, 28):02d}"
-        self.fecha_fin = f"{random.randint(2031, 2035)}-{random.randint(1, 12):02d}-{random.randint(1, 28):02d}"
-
-        # Generar un número aleatorio de objetivos para la misión (entre 1 y 5)
-        num_objetivos = random.randint(1, 5)
-        for _ in range(num_objetivos):
-            objetivo = f"Objetivo {random.randint(1, 100)}"
-            self.objetivos.append(objetivo)
-
-        # Generar un mensaje aleatorio para la descripción de la misión
-        mensajes_descripcion = [
-            "Misión de exploración",
-            "Misión de investigación científica",
-            "Misión de búsqueda de vida extraterrestre",
-            "Misión de recolección de muestras"
-        ]
-        self.descripcion = random.choice(mensajes_descripcion)
-
-
-
-
-report = ['Hello! This is the OrbitOne Report!']
