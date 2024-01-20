@@ -1,0 +1,25 @@
+{
+  "nombre_mision": "Misi\u00c3\u00b3n GalaxyTwo",
+  "fecha_lanzamiento": "2024-01-17",
+  "tipo_mision": "Exploracion",
+  "objetivos_mision": [
+    "Explorar la posibilidad de visitar otras galaxias"
+  ],
+  "dispositivos_espaciales": [
+    {
+      "id_dispositivo": "ef2c07b5-08fb-4683-97ab-5ef9e16ffc43",
+      "tipo_dispositivo": "Sat\u00c3\u00a9lite",
+      "estado_dispositivo": "En mantenimiento"
+    },
+    {
+      "id_dispositivo": "658c7cde-c683-4228-954e-3bad83c4a07b",
+      "tipo_dispositivo": "Sonda",
+      "estado_dispositivo": "En mantenimiento"
+    },
+    {
+      "id_dispositivo": "238768b7-9365-4508-84c9-715db031c64f",
+      "tipo_dispositivo": "Sat\u00c3\u00a9lite",
+      "estado_dispositivo": "En espera"
+    }
+  ]
+}

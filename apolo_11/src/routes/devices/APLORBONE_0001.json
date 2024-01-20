@@ -1,0 +1,22 @@
+{
+  "nombre_mision": "Misi\u00c3\u00b3n OrbitOne",
+  "fecha_lanzamiento": "2024-01-17",
+  "tipo_mision": "Satelital",
+  "objetivos_mision": [
+    "Modernizar toda la flota de sat\u00c3\u00a9lites",
+    "Potenciar el desempe\u00c3\u00b1o",
+    "Mejorar Cobertura"
+  ],
+  "dispositivos_espaciales": [
+    {
+      "id_dispositivo": "3bd7715e-f851-4a36-a499-c9e4b7752877",
+      "tipo_dispositivo": "Lanzadores espaciales",
+      "estado_dispositivo": "Inoperable"
+    },
+    {
+      "id_dispositivo": "1f47caef-536d-4b4b-a362-103da48cfd48",
+      "tipo_dispositivo": "Sonda",
+      "estado_dispositivo": "Bueno"
+    }
+  ]
+}

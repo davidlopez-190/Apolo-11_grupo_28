@@ -1,0 +1,27 @@
+{
+    "tipos_dispositivo": ["Sonda", "Satélite", "Telescopio", "Naves", "Trajes", "Vehiculos espaciales Tripulados", "Vehiculos espaciales no Tripulados", "Lanzadores espaciales", "Transbordador espacila"],
+    "estados_dispositivo": ["Excelente", "Bueno", "Advertencia", "Faulty", "Inoperable", "Desconocido"],
+    "misiones": [
+      {
+        "nombre": "Misión OrbitOne",
+        "tipo": "Satelital",
+        "objetivos": ["Modernizar toda la flota de satélites", "Potenciar el desempeño","Mejorar Cobertura"]
+      },
+      {
+        "nombre": "Misión ColonyMoon",
+        "tipo": "Expansión",
+        "objetivos": ["Establecer una colonia en la Luna", "Estudiar la atmósfera de la Luna"]
+      },
+      {
+        "nombre": "Misión VacMars",
+        "tipo": "Comercio",
+        "objetivos": ["Llevar a personas en viajes turísticos a Marte", "Realizar estudios geológicos en la superficie de Marte","Buscar signos de vida pasada o presente","Probar nuevas tecnologías de propulsión"]
+      },
+      {
+        "nombre": "Misión GalaxyTwo",
+        "tipo": "Exploracion",
+        "objetivos": ["Explorar la posibilidad de visitar otras galaxias"]
+      }
+    ]
+  }
+  
