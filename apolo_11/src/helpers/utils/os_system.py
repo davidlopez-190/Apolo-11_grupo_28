@@ -1,9 +1,8 @@
 import os
 
 
-class OsSystem:   
-    
+class OsSystem:
     @staticmethod
     def clear_console():
-        clear = os.system('cls' if os.name == 'nt' else 'clear')
+        clear = os.system("cls" if os.name == "nt" else "clear")
         return clear

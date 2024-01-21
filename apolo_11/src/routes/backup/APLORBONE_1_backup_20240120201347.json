@@ -1,0 +1,32 @@
+{
+  "nombre_mision": "OrbitOne",
+  "fecha_lanzamiento": "2024-01-20",
+  "tipo_mision": "test",
+  "objetivos_mision": "test",
+  "dispositivos_espaciales": [
+    {
+      "date": "281223203027",
+      "mission": "ColonyMoon",
+      "device_type": "Cohete",
+      "device_name": "Ares I",
+      "device_status": "Excellent",
+      "hash": "62f254990538b8af75d69e9199b8e820382b38f1676fd114c52304860839a48f"
+    },
+    {
+      "date": "281223203041",
+      "mission": "ColonyMoon",
+      "device_type": "Cohete",
+      "device_name": "Ares V",
+      "device_status": "Unknown",
+      "hash": "3793210a89f2ef36eeef580ff43a80d41f6fe5c7cb9f3310b7f284ff2ed0bc5a"
+    },
+    {
+      "date": "281223203041",
+      "mission": "ColonyMoon",
+      "device_type": "Explorador",
+      "device_name": "Viper",
+      "device_status": "Unknown",
+      "hash": "3793210a89f2ef36eeef580ff43a80d41f6fe5c7cb9f3310b7f284ff2ed0bc5a"
+    }
+  ]
+}
