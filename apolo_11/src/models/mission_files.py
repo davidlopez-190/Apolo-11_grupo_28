@@ -3,20 +3,31 @@ import random
 import shutil
 from datetime import datetime
 
+from ..helpers.utils.read_config import FullPaths, ReadConfig
 from .mission import Mision
+
+backuppath = FullPaths.backup_path()
+missions_path = FullPaths.missions_path()
+prefix = ReadConfig.prefix_mision_file_name()
+prefix_components = ReadConfig.prefix_components()
+json_extension = ReadConfig.json_extension()
+file_number_range = ReadConfig.file_number_range()
+mission_prefix = ReadConfig.mission_dict()
 
 
 class MissionFiles:
     @staticmethod
     def generar_archivos_misiones():
-        cantidad_archivos = random.randint(1, 5)
-        for i in range(1, cantidad_archivos + 1):
-            nombre_archivo = f"APLORBONE_{i}.json"
-            ruta_json_personalizada = (
-                "apolo_11/src/routes/missions/ColonyMoon_Components.json"
-            )
-            mision = Mision(path_mission_components=ruta_json_personalizada)
-            mision.guardar_datos_en_archivo(nombre_archivo)
+        cantidad_archivos = random.randint(1, file_number_range)
+        for p in mission_prefix:
+            for i in range(1, cantidad_archivos + 1):
+                mnemonic_value = mission_prefix[p]
+                nombre_archivo = f"{prefix}{mnemonic_value}{i}{json_extension}"
+                ruta_json_personalizada = os.path.join(
+                    missions_path, f"{p}{prefix_components}{json_extension}"
+                )
+                mision = Mision(path_mission_components=ruta_json_personalizada)
+                mision.guardar_datos_en_archivo(nombre_archivo)
 
     @staticmethod
     def generar_backup_carpeta(carpeta_origen: str, carpeta_destino: str):

@@ -1,10 +1,10 @@
 import json
 import os
-from configparser import ConfigParser
 from datetime import datetime
 
-config = ConfigParser()
-config.read("./config.ini")
+from ..helpers.utils.read_config import FullPaths
+
+devicespath = FullPaths.devices_path()
 
 
 class Mision:
@@ -30,7 +30,7 @@ class Mision:
         }
 
     def guardar_datos_en_archivo(self, nombre_archivo: str) -> None:
-        ruta_directorio = "apolo_11/src/routes/devices/"  # mejorar los / \ dependiendo del OS, agregar metodo en el objeto Apolo-11_grupo_28\apolo_11\src\helpers\utils\os_system.py
+        ruta_directorio = devicespath
         ruta_completa = os.path.join(ruta_directorio, nombre_archivo)
 
         try:
