@@ -19,6 +19,14 @@
       "device_name": "Lunar1",
       "device_status": "Defectuoso",
       "hash": "8f4107d52e79ab9ef7bcc5bcd85dc49d8f98419304255ef1af48fc181626a080"
+    },
+    {
+      "date": "2024-01-25 18:31:44",
+      "mission": "ColonyMoon",
+      "device_type": "Satelite",
+      "device_name": "Venus1",
+      "device_status": "Defectuoso",
+      "hash": "3b90d461b9a6298de81020bfa9d7bd4294998d5152db2f4b7908629e6b345ee7"
     }
   ]
 }

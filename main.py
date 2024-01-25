@@ -28,7 +28,7 @@ def request_reports_missions():
         MissionFiles.generar_backup_carpeta(carpeta_origen, carpeta_destino)
 
 
-def main():
+def main() -> None:
     report_request_thread = threading.Thread(target=request_reports_missions)
     report_request_thread.daemon = True
     report_request_thread.start()
@@ -70,7 +70,19 @@ def main():
                     mision
                 )  # Guarda en archivo hisotrico el nuevo componente
             elif choice == "3":
-                pass  # TODO = Generar logica de eliminacion
+                mision = input(
+                    "Ingrese el nombre de la misión a la que eliminara el componente: "
+                )
+                componente_name = input("Ingrese el nombre del componente a eliminar: ")
+                gestor.cargar_componentes_desde_archivo(
+                    mision
+                )  # Carga componentes al archivo hisotrico
+                gestor.quitar_componente(
+                    componente_name
+                )  # Carga componentes al archivo hisotrico
+                gestor.guardar_componentes_en_archivo(
+                    mision
+                )  # Guarda en archivo hisotrico el nuevo componente
             elif choice == "0":
                 current_menu = main_menu
             else:

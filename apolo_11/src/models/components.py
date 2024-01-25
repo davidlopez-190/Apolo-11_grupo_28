@@ -60,6 +60,7 @@ class MissionComponents:
     def quitar_componente(self, device_name: str) -> None:
         for componente in self.componentes_espaciales:
             if componente["device_name"] == device_name:
+                print(f"Componente eliminado:\n{componente}")
                 self.componentes_espaciales.remove(componente)
                 print(f"Componente eliminado:\n{componente}")
                 return

@@ -1,7 +1,7 @@
 {
   "nombre_mision": "GalaxyTwo",
   "fecha_lanzamiento": "2024-01-25",
-  "tipo_mision": "Orbita",
+  "tipo_mision": "Espacial",
   "objetivos_mision": "test",
   "dispositivos_espaciales": [
     {

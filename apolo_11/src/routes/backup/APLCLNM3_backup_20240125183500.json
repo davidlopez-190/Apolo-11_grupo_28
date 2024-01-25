@@ -1,7 +1,7 @@
 {
   "nombre_mision": "ColonyMoon",
   "fecha_lanzamiento": "2024-01-25",
-  "tipo_mision": "Orbita",
+  "tipo_mision": "Comercio",
   "objetivos_mision": "test",
   "dispositivos_espaciales": [
     {
@@ -19,6 +19,14 @@
       "device_name": "Lunar1",
       "device_status": "Defectuoso",
       "hash": "8f4107d52e79ab9ef7bcc5bcd85dc49d8f98419304255ef1af48fc181626a080"
+    },
+    {
+      "date": "2024-01-25 18:33:39",
+      "mission": "ColonyMoon",
+      "device_type": "satelite",
+      "device_name": "Marte1",
+      "device_status": "Excelente",
+      "hash": "dc13ffcce8254ab53d012a9893a5384e5f70597950d328909f6b811365f0a998"
     }
   ]
 }
