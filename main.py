@@ -3,9 +3,11 @@ import time
 
 from apolo_11.menu_system import commander_center_menu, leader_center_menu, main_menu
 from apolo_11.src.helpers.utils.os_system import OsSystem
-from apolo_11.src.helpers.utils.read_config import ReadConfig
+from apolo_11.src.helpers.utils.read_config import FullPaths, ReadConfig
+from apolo_11.src.models.components import MissionComponents
 from apolo_11.src.models.mission_files import MissionFiles
 
+gestor = MissionComponents()
 EXECUTION_PERIODICITY = ReadConfig.cycle_frequency_time()
 
 
@@ -17,9 +19,9 @@ def request_reports_missions():
                 EXECUTION_PERIODICITY
             )
         )
-        carpeta_a_limpiar = "apolo_11/src/routes/devices"
-        carpeta_origen = "apolo_11/src/routes/devices"
-        carpeta_destino = "apolo_11/src/routes/backup"
+        carpeta_a_limpiar = FullPaths.devices_path()
+        carpeta_origen = FullPaths.devices_path()
+        carpeta_destino = FullPaths.backup_path()
 
         MissionFiles.eliminar_archivos_carpeta(carpeta_a_limpiar)
         MissionFiles.generar_archivos_misiones()
@@ -50,6 +52,29 @@ def main():
                 print(
                     "Eleccion Invalida. Por favor ingrese un numero comprendido entre el 1 y el 3."
                 )
+        elif current_menu == leader_center_menu:  # Agrega lógica para el menú del líder
+            if choice == "1":
+                # Ver todas las misiones (pendiente)
+                pass
+            elif choice == "2":
+                mision = input("Ingrese el nombre de la misión: ")
+                tipo = input("Ingrese el tipo de componente: ")
+                componente = input("Ingrese el nombre del componente: ")
+                gestor.cargar_componentes_desde_archivo(
+                    mision
+                )  # Carga componentes al archivo hisotrico
+                gestor.agregar_componente(
+                    mision, tipo, componente
+                )  #  Crear un Componente de Mision
+                gestor.guardar_componentes_en_archivo(
+                    mision
+                )  # Guarda en archivo hisotrico el nuevo componente
+            elif choice == "3":
+                pass  # TODO = Generar logica de eliminacion
+            elif choice == "0":
+                current_menu = main_menu
+            else:
+                print("Eleccion Invalida. Por favor ingrese un número válido.")
         else:
             if choice == "0":
                 current_menu = main_menu

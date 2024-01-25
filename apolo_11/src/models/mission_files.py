@@ -13,6 +13,7 @@ prefix_components = ReadConfig.prefix_components()
 json_extension = ReadConfig.json_extension()
 file_number_range = ReadConfig.file_number_range()
 mission_prefix = ReadConfig.mission_dict()
+mission_type_list = ReadConfig.mission_type_list()
 
 
 class MissionFiles:
@@ -22,12 +23,18 @@ class MissionFiles:
         for p in mission_prefix:
             for i in range(1, cantidad_archivos + 1):
                 mnemonic_value = mission_prefix[p]
+                mission_type_choice = random.choice(mission_type_list)
                 nombre_archivo = f"{prefix}{mnemonic_value}{i}{json_extension}"
                 ruta_json_personalizada = os.path.join(
                     missions_path, f"{p}{prefix_components}{json_extension}"
                 )
-                mision = Mision(path_mission_components=ruta_json_personalizada)
-                mision.guardar_datos_en_archivo(nombre_archivo)
+                mision = Mision(
+                    path_mission_components=ruta_json_personalizada,
+                    mission_name=p,
+                    mission_type=mission_type_choice,
+                    mission_goal="test",
+                )
+                mision.guardar_datos_en_archivo(nombre_archivo, p)
 
     @staticmethod
     def generar_backup_carpeta(carpeta_origen: str, carpeta_destino: str):
@@ -68,13 +75,3 @@ class MissionFiles:
                     print(f"Se ha eliminado el archivo: {archivo_ruta}")
                 except Exception as e:
                     print(f"Error al eliminar el archivo '{archivo_ruta}': {e}")
-
-
-# Ejemplo de uso:
-carpeta_a_limpiar = "apolo_11/src/routes/devices"
-carpeta_origen = "apolo_11/src/routes/devices"
-carpeta_destino = "apolo_11/src/routes/backup"
-
-# MissionFiles.generar_archivos_misiones()
-# MissionFiles.generar_backup_carpeta(carpeta_origen, carpeta_destino)
-# MissionFiles.eliminar_archivos_carpeta(carpeta_a_limpiar)

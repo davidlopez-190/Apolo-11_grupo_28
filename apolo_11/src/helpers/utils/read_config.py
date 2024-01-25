@@ -39,6 +39,18 @@ class ReadConfig:
         prefix_components = str(config.get("apolo_11", "prefix_components"))
         return prefix_components
 
+    @staticmethod
+    def mission_type_list():
+        mission_str = config.get("apolo_11", "mission_type")
+        mission_type_list = [str(value.strip()) for value in mission_str.split(",")]
+        return mission_type_list
+
+    @staticmethod
+    def component_state_list():
+        statate_str = config.get("apolo_11", "components_states")
+        component_state_list = [str(value.strip()) for value in statate_str.split(",")]
+        return component_state_list
+
 
 class FullPaths:
     @staticmethod
