@@ -1,0 +1,19 @@
+{
+  "resultados": [
+    {
+      "mision": "ColonyMoon",
+      "dispositivo": "Solar1",
+      "cantidad": 1
+    },
+    {
+      "mision": "OrbitOne",
+      "dispositivo": "Gaia",
+      "cantidad": 1
+    },
+    {
+      "mision": "VacMarc",
+      "dispositivo": "Breakthrough Starshot",
+      "cantidad": 1
+    }
+  ]
+}

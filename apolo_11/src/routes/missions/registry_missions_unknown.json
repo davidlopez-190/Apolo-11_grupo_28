@@ -1,5 +1,32 @@
 [
+<<<<<<< HEAD
     {
         "0": "Mem: (Mobility Energy Moon) Mision encargada de llevar y construir paneles solares a la luna para proveer energia tanto a misiones espaciales como al mismo satelite lunar. Sera como una parada obligatoria de cada nave"
     }
+=======
+  {
+    "mission": "OrbitOne",
+    "mnemonic": "ORBONE",
+    "mission_type": "Satelital",
+    "mission_goal": "Modernizar toda la flota de sat\u00c3\u00a9lites con el objetivo de potenciar su desempe\u00c3\u00b1o y mejorar la cobertura y las comunicaciones"
+  },
+  {
+    "mission": "ColonyMoon",
+    "mnemonic": "CLNM",
+    "mission_type": "Colonia",
+    "mission_goal": "Establecer una colonia en la Luna"
+  },
+  {
+    "mission": "VacMars",
+    "mnemonic": "VCMR",
+    "mission_type": "Turismo",
+    "mission_goal": "Llevar a personas en viajes tur\u00c3\u00adsticos a Marte"
+  },
+  {
+    "mission": "GalaxyTwo",
+    "mnemonic": "GALXTWO",
+    "mission_type": "Turismo",
+    "mission_goal": "Explorar la posibilidad de visitar otras galaxias"
+  }
+>>>>>>> main
 ]
