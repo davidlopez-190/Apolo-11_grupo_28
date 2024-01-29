@@ -12,8 +12,7 @@ def commander_center_menu():
         print("3 - Consolidar Misiones")
         print("4 - Gestionar Desconexiones")
         print("5 - Calcular Porcentaje de Datos")
-        print("6 - Limpiar Archivos")
-        print("7 - Acceder al Tablero de Control")
+        print("6 - Limpiar Archivos (No es opcional)" )
         print("8 - Detener y Salir del programa")
         print("0 - Regresar al Menú Principal")
             

@@ -1,17 +1,5 @@
 [
     {
-        "0": "OrbitOne: Modernizar toda la flota de satélites con el objetivo de potenciar su desempeño y mejorar la cobertura y las comunicaciones"
-    },
-
-    {
-        "1": "ColonyMoon: Establecer una colonia en la Luna"
-    },
-
-    {
-        "2": "VacMars: Llevar a personas en viajes turísticos a Marte"
-    },
-    
-    {
-        "3": "GalaxyTwo: Explorar la posibilidad de visitar otras galaxias"
+        "0": "Mem: (Mobility Energy Moon) Mision encargada de llevar y construir paneles solares a la luna para proveer energia tanto a misiones espaciales como al mismo satelite lunar. Sera como una parada obligatoria de cada nave"
     }
 ]
