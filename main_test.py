@@ -1,9 +1,6 @@
-from apolo_11.src.models.components import MissionComponents
+from apolo_11.src.models.unknown_status_report import UnknownStatusReport
 
-gestor = MissionComponents()
-
-gestor.cargar_componentes_desde_archivo("ColonyMoon")
-gestor.mostrar_componentes()
-gestor.agregar_componente("ColonyMoon", "Cohete", "Ares II")
-gestor.mostrar_componentes()
-gestor.guardar_componentes_en_archivo("ColonyMoon")
+analizador = UnknownStatusReport()
+analizador.analizar_archivos()
+analizador.imprimir_resultados()
+analizador.guardar_resultados_en_json()

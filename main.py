@@ -8,10 +8,12 @@ from apolo_11.src.models.components import MissionComponents
 from apolo_11.src.models.mission_files import MissionFiles
 from apolo_11.src.models.mission_load import MissionHandler
 from apolo_11.src.models.missions_unknown import MissionManager
+from apolo_11.src.models.unknown_status_report import UnknownStatusReport
 
 mission_manager = MissionManager()
 gestor = MissionComponents()
 mission_handler = MissionHandler()
+analizador = UnknownStatusReport()
 EXECUTION_PERIODICITY = ReadConfig.cycle_frequency_time()
 
 
@@ -70,7 +72,9 @@ def main() -> None:
                 pass
             elif choice == "4":
                 # Gestionar Desconexiones(pendiente)
-                pass
+                analizador.analizar_archivos()
+                analizador.imprimir_resultados()
+                analizador.guardar_resultados_en_json()
             elif choice == "5":
                 # Calcular Porcentaje de Datos (pendiente)
                 pass

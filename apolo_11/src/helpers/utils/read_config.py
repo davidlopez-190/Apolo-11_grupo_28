@@ -84,6 +84,16 @@ class FullPaths:
         return colonymoon_path_json
 
     @staticmethod
+    def reports_path() -> str:
+        reports_path_json = os.path.join(
+            config.get("apolo_11", "apolo_11_folder_name"),
+            config.get("apolo_11", "scr_folder_name"),
+            config.get("apolo_11", "routes_folder_name"),
+            config.get("apolo_11", "reports_folder_name"),
+        )
+        return reports_path_json
+
+    @staticmethod
     def registry_missions_file_path() -> str:
         colonymoon_path_json = os.path.join(
             config.get("apolo_11", "apolo_11_folder_name"),
